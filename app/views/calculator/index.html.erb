@@ -1,7 +1,7 @@
 <h1>Hello Calculator</h1>
-<form action="add" method="post">
-  a: <input name="a"><br/>
-  b: <input name="b"><br/>
+<form action="calc/add" method="post">
+  a: <input name="a" value="<%= @a %>"><br/>
+  b: <input name="b" value="<%= @b %>"><br/>
   <button type="submit">Add</button>
   <%= @result %>
 </form>

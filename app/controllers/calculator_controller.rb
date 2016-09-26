@@ -4,11 +4,9 @@ class CalculatorController < ApplicationController
   end
 
   def add
-    byebug
-    a = params[:a].to_i
-    b = params[:b].to_i
-
-    @result = a + b
+    @a = params[:a].to_i
+    @b = params[:b].to_i
+    @result = @a + @b
 
     render 'index'
   end
