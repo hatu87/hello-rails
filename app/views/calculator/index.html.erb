@@ -2,9 +2,10 @@
   <strong>Well done!</strong> You successfully read this important alert message.
 </div>
 <h1>Hello Calculator</h1>
-<form action="calc/add" method="post">
+<%= form_tag('calc/add', remote: true) do %>
+
   a: <input name="a" value="<%= @a %>"><br/>
   b: <input name="b" value="<%= @b %>"><br/>
   <button type="submit">Add</button>
-  <%= @result %>
-</form>
+  <strong id="calculator-result">No result</strong>
+<% end %>
